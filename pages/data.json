@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "heading": "Kontribusi",
+    "body": "Welcome buat yang ingin berkontribusi, silahkan visit Repository",
+    "path": "https://github.com/NextJS-Indonesia"
+  },
+  {
+    "id": "2",
+    "heading": "Dokumentasi",
+    "body": "Berbagai informasi dengan fitur Next.js dan API",
+    "path": "https://nextjs.org/docs"
+  },
+  {
+    "id": "3",
+    "heading": "Belajar",
+    "body": "Pelajari Next.js dengan lebih interaktif dan tersedia kuis!",
+    "path": "https://nextjs.org/learn"
+  },
+  {
+    "id": "4",
+    "heading": "Tutorial",
+    "body": "Contoh project yang dibuat menggunakan Next.js",
+    "path": "https://github.com/vercel/next.js/tree/master/examples"
+  },
+  {
+    "id": "5",
+    "heading": "Telegram",
+    "body": "Diskusi bersama Komunitas Next.js Indonesia",
+    "path": "https://t.me/nextjs_id"
+  },
+  {
+    "id": "6",
+    "heading": "Discord",
+    "body": "Diskusi bersama Komunitas Frontend Indonesia",
+    "path": "https://discord.gg/pQF9b74"
+  }
+]

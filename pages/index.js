@@ -1,91 +1,81 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
+import {
+  Heading,
+  Link,
+  Text,
+  Code,
+  Flex,
+  Box,
+  Stack,
+  Grid
+} from "@chakra-ui/core";
+// components
+import data from "./data";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <>
       <Head>
         <title>NextJS Indonesia</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Selamat datang <a href="https://nextjs.org">Next.js Indonesia</a>
-        </h1>
+      <Flex as="main" alignItems="center" justifyContent="center" mt="10">
+        <Stack>
+          <Box textAlign="center">
+            <Heading as="h1" size="2xl" mb="2">
+              Selamat datang{" "}
+              <Link
+                color="teal.500"
+                href="https://nextjs.id"
+                _hover={{ textDecoration: "none" }}
+              >
+                Next.js Indonesia
+              </Link>
+            </Heading>
 
-        <p className={styles.description}>
-          Halaman ini sedang dalam pengembangan{" ,"}
-          <code className={styles.code}>pages/index.js</code>
-          temukan berbagai resources dari Next.js global
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://github.com/NextJS-Indonesia" className={styles.card}>
-            <h3>Kontribusi &rarr;</h3>
-            <p>
-              Welcome buat yang ingin berkontribusi, silahkan visit Repository
-            </p>
-          </a>
-
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Dokumentasi &rarr;</h3>
-            <p>Berbagai informasi dengan fitur Next.js dan API</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Belajar &rarr;</h3>
-            <p>Pelajari Next.js dengan lebih interaktif dan tersedia kuis!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
+            <Text fontSize="xl" mt="2">
+              Halaman ini sedang dalam pengembangan{" ,"}
+              <Code>pages/index.js</Code>
+              temukan
+            </Text>
+          </Box>
+          <Grid
+            templateColumns={{
+              lg: "repeat(3, 1fr)",
+              md: "repeat(2, 1fr)",
+              sm: "repeat(1, 1fr)"
+            }}
+            gap={5}
+            maxWidth="86em"
+            ml="auto"
+            mr="auto"
           >
-            <h3>Contoh dan Tutorial &rarr;</h3>
-            <p>Banyak contoh project Next.js</p>
-          </a>
+            {data.map(d => (
+              <Box
+                key={d.id}
+                as="a"
+                target="_blank"
+                rel="noopener noreferrer"
+                href={d.path}
+                borderWidth="1px"
+                rounded="lg"
+                padding="6"
+                margin="4"
+              >
+                <Heading as="h3" size="xl" mb="2" color="teal.500">
+                  {d.heading} &rarr;
+                </Heading>
+                <Text fontSize="lg">{d.body}</Text>
+              </Box>
+            ))}
+          </Grid>
 
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>Deploy Next.js dengan menggunakan Vercel.</p>
-          </a>
-
-          <a
-            href="https://t.me/nextjs_id"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.card}
-          >
-            <h3>Group Telegram &rarr;</h3>
-            <p>Diskusi bersama Komunitas Next.js Indonesia</p>
-          </a>
-
-          <a
-            href="https://discord.gg/pQF9b74"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.card}
-          >
-            <h3>Group Discord Frontend Indonesia &rarr;</h3>
-            <p>Diskusi bersama Komunitas Frontend Indonesia</p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{" "}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
+          <Box as="footer">
+            <Text textAlign="center">Next JS ID</Text>
+          </Box>
+        </Stack>
+      </Flex>
+    </>
   );
 }
