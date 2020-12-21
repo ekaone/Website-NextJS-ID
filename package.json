@@ -1,6 +1,24 @@
 {
   "name": "website",
-  "version": "0.1.0",
+  "description": "Website Komunitas Nextjs.id",
+  "version": "1.0.0",
+  "keywords": [
+    "website",
+    "nextjs",
+    "komunitas",
+    "kode",
+    "indonesia"
+  ],
+  "author": {
+    "name": "eka",
+    "email": "ekaone3033@gmail.com",
+    "url": "https://ekaprasetia.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NextJS-Indonesia/Website.com.git"
+  },
   "private": true,
   "scripts": {
     "dev": "next dev",
